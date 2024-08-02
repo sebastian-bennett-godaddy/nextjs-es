@@ -1,0 +1,55 @@
+.home {
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    background-color: brown;
+    flex: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 20vh;
+}
+
+.body {
+    background-color: blanchedalmond;
+    color: brown;
+    flex: 4;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+
+    /* vertical spacing */
+    gap: 20px;      
+
+    /* justify-content: space-around;
+    align-items: center; */
+}
+.cardRow {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    
+    /* horizonal spacing */
+    gap: 20px; 
+
+    /* justify-content: space-around;
+    align-items: center; */
+}
