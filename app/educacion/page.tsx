@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react';
-import styles from './home.module.css'
+import styles from './educacion.module.css'
 import Navbar from '@/components/nav/Navbar';
 
 interface IAppProps {
@@ -10,12 +10,8 @@ interface IAppProps {
 const App: React.FunctionComponent<IAppProps> = (props) => {
   return <><div className={styles.home}>
           <Navbar/>
-          <div className={styles.header}><h3> ¡Welcome to De La Élitacietè!</h3></div>
+          <div className={styles.header}><h3>Welcome to De La Élitacietè</h3></div>
           <div className={styles.body}>
-            <div className={styles.imgContainer}>
-              <img src='/images/illustrations/ezekiel/ministry.webp'/>
-            </div>
-            {/* <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
             <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
             <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
             <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
@@ -29,7 +25,8 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
             <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
             <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
             <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
-            <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3> */}
+            <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
+            <h3>Tutta De La Ragrazza En La Familia Soy Muy Perfectosique</h3>
           </div>
         </div></>;
 };

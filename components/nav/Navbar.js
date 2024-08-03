@@ -10,9 +10,10 @@ const MENU_LIST = [
 //   { text: "About Us", href: "/about" },
 //   { text: "Contact", href: "/contact" },
   { text: "Attivida", href: "/attivida" },
-  { text: "Centra", href: "/centra" },
+  { text: "C'entra", href: "/centra" },
   { text: "Connettiti", href: "/connettiti" },
   { text: "Messina", href: "/messina" },
+  { text: "Educación", href: "/educacion" },
   { text: "Partenza", href: "/partenza" },
 ];
 

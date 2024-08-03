@@ -21,6 +21,7 @@ header{
   justify-content: space-between;
   align-items: center;
   background-color: rgb(176, 74, 1);
+  color: wheat;
   padding-right: 35px;
 }
 .nav__menu-bar{
