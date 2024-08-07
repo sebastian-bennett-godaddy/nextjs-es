@@ -1,120 +1,89 @@
-'use client'
+'use client';
 import * as React from 'react';
-import styles from './centra.module.css'
+import styles from './centra.module.css';
 import { Avatar, Card, Tabs } from 'antd';
 import Meta from 'antd/es/card/Meta';
 import Navbar from '@/components/nav/Navbar';
 import { centreList } from '@/database/centre-list';
 
-interface IAppProps {
-}
+interface IAppProps {}
 
-const App: React.FunctionComponent<IAppProps> = (props) => {
-  return <><div className={styles.home}>
-          <Navbar/>
-          <div className={styles.header}><h3>Welcome to De La Élitacietè</h3></div>
-          <Tabs
-        defaultActiveKey="1"
-        type="card"
-        size={'small'}
-        items={new Array(3).fill(null).map((_, i) => {
-          const id = String(i + 1);
-          return {
-            label: `Card Tab ${id}`,
-            key: id,
-            children: `Content of card tab ${id}`,
-          };
-        })}
-      />
-          <div className={styles.body}>
-            <div className={styles.cardContainer}>
-            {/* {Array.of(centreList).map((religionCentre) => {
-              return religionCentre.christianity.map((centre) => {
-                return (
-                  <Card
-                    key={centre.id} // Add a key prop for each Card
-                    style={{ width: '45vw' }}
-                    cover={
-                      <img
-                        alt={centre.title} // Use centre.title for the alt text
-                        src={centre.imgSrc} // Use centre.imgSrc for the image source
-                      />
-                    }
-                    actions={[
-                      // Uncomment and use these actions if needed
-                      // <SettingOutlined key="setting" />,
-                      // <EditOutlined key="edit" />,
-                      // <EllipsisOutlined key="ellipsis" />,
-                    ]}
-                  >
-                    <Meta
-                      avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
-                      title={centre.title} // Use centre.title for the title
-                      description={centre.description} // Use centre.description for the description
-                    />
-                  </Card>
-                );
-              });
-            })} */}
-            {Array.of(centreList).map((religionCentre) => {
-              return religionCentre.buddhism.map((centre) => {
-                return (
-                  <Card
-                    key={centre.id} // Add a key prop for each Card
-                    style={{ width: '45vw' }}
-                    cover={
-                      <img
-                        alt={centre.title} // Use centre.title for the alt text
-                        src={centre.imgSrc} // Use centre.imgSrc for the image source
-                      />
-                    }
-                    actions={[
-                      // Uncomment and use these actions if needed
-                      // <SettingOutlined key="setting" />,
-                      // <EditOutlined key="edit" />,
-                      // <EllipsisOutlined key="ellipsis" />,
-                    ]}
-                  >
-                    <Meta
-                      avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
-                      title={centre.title} // Use centre.title for the title
-                      description={centre.description} // Use centre.description for the description
-                    />
-                  </Card>
-                );
-              });
-            })}
-            {/* {Array.of(centreList).map((religionCentre) => {
-              return religionCentre.hinduism.map((centre) => {
-                return (
-                  <Card
-                    key={centre.id} // Add a key prop for each Card
-                    style={{ width: '45vw' }}
-                    cover={
-                      <img
-                        alt={centre.title} // Use centre.title for the alt text
-                        src={centre.imgSrc} // Use centre.imgSrc for the image source
-                      />
-                    }
-                    actions={[
-                      // Uncomment and use these actions if needed
-                      // <SettingOutlined key="setting" />,
-                      // <EditOutlined key="edit" />,
-                      // <EllipsisOutlined key="ellipsis" />,
-                    ]}
-                  >
-                    <Meta
-                      avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
-                      title={centre.title} // Use centre.title for the title
-                      description={centre.description} // Use centre.description for the description
-                    />
-                  </Card>
-                );
-              });
-            })} */}
-            </div>
-          </div>
-        </div></>;
+const getCardsByReligion = (religion: string) => {
+  // Access the property directly using the religion parameter
+  const centres = religion === 'christianity' ? centreList.christianity
+                : religion === 'buddhism' ? centreList.buddhism
+                : religion === 'hinduism' ? centreList.hinduism
+                : [];
+  ;
+
+  return (
+    <div className={styles.cardContainer}>
+      {centres?.map((centre: any) => (
+        <Card
+          key={centre.id} // Ensure id is unique for each card
+          style={{ width: '45vw' }}
+          cover={
+            <img
+              alt={centre.title} // Use centre.title for the alt text
+              src={centre.imgSrc} // Use centre.imgSrc for the image source
+            />
+          }
+          actions={[
+            // Uncomment and use these actions if needed
+            // <SettingOutlined key="setting" />,
+            // <EditOutlined key="edit" />,
+            // <EllipsisOutlined key="ellipsis" />,
+          ]}
+        >
+          <Meta
+            avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
+            title={centre.title} // Use centre.title for the title
+            description={centre.description} // Use centre.description for the description
+          />
+        </Card>
+      ))}
+    </div>
+  );
+};
+
+// Function to determine religion based on id
+const getReligionById = (id: string) => {
+  switch (id) {
+    case '1':
+      return 'christianity';
+    case '2':
+      return 'buddhism';
+    case '3':
+      return 'hinduism';
+    default:
+      return 'christianity'; // Default fallback
+  }
+};
+
+const App: React.FunctionComponent<IAppProps> = () => {
+  return (
+    <>
+      <div className={styles.home}>
+        <Navbar />
+        <Tabs
+          defaultActiveKey="1"
+          size={'small'}
+          className={styles.religionTabs}
+          items={new Array(3).fill(null).map((_, i) => {
+            const id = String(i + 1); // 1, 2, 3
+            const religion = getReligionById(id); // christianity, buddhism, hinduism
+            const capitalizedReligion = religion.charAt(0).toUpperCase() + religion.slice(1).toLowerCase();
+
+            return {
+              label: capitalizedReligion,
+              key: id,
+              children: getCardsByReligion(religion),
+            };
+          })}
+        />
+      </div>
+    </>
+  );
 };
 
 export default App;

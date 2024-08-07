@@ -7,8 +7,8 @@
 }
 
 .header {
-    background-color: brown;
-    color: wheat;
+    background-color: white;
+    color: black;
     flex: 1;
     
     display: flex;
@@ -34,13 +34,27 @@
     flex-direction: row;
     flex-wrap: wrap;
     overflow: auto;
+
+    justify-content: center;
     
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 
     /* vertical spacing */
     gap: 20px;      
 
     /* justify-content: space-around;
     align-items: center; */
+}
+
+.religionTabs {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

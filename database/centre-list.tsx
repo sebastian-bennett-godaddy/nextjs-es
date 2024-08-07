@@ -1,5 +1,6 @@
 export const centreList = {
-    christianity: [{
+    christianity: [
+    {
         id: 1,
         imgSrc: "/images/centre/christianity/brasilia-cathedral-in-brazil.avif",
         title: "Cathedral of Brasília in Brazil",
@@ -236,6 +237,32 @@ buddhism: [
         imgSrc: "/images/centre/buddhism/chinese-lanterns-at-kek-lok-si-temple-george-town.avif",
         title: "Kek Lok Si Temple, Malaysia",
         description: "Penang is often touted for its sandy beaches, creative interactive street art, and incredible seafood dishes, but it’s also home to the largest Buddhist temple in Malaysia. A melting pot of cultures, the temple’s architecture showcases Chinese, Thai, and Burmese styles throughout its stunning seven stories. It’s estimated there are 10,000 statues of Buddha depicted throughout its main pagodas.",
+    },
+],
+hinduism: [
+    {
+        id: 1,
+        imgSrc: "/images/centre/hinduism/akshardham-temple-delhi.avif",
+        title: "Akshardham Temple, Delhi",
+        description: "The Swaminarayan temple was constructed on 100 acres of land near the Commonwealth Khelgaon in Delhi by BAPS is also known as the Akshardham Temple. It depicts Indian culture, spirituality and architecture, 10,000 years old and its name was recorded in the Guinness Book of Records. Akshardham temple complex hosts thematic garden, Sanskruti Vihar, Musical fountain, Garden of India, among others."
+    },
+    {
+        id: 3,
+        imgSrc: "/images/centre/hinduism/nellaiappar-temple-tirunelveli.avif",
+        title: "Nellaiappar Temple, Tirunelvel",
+        description: "Located in the city of Tirunelveli, this temple is devoted to Swamy Nellaippar and Sri Arulthaarum Kanthimathi Ambal. Spread over 71,000 square meters, it is one of the oldest temples in India. "
+    },
+    {
+        id: 2,
+        imgSrc: "/images/centre/hinduism/ekambareswarar-temple-kanchipuram.avif",
+        title: "Ekambareswarar Temple, Kanchipuram",
+        description: "The Ekambareswarar or Ekambaranathar temple is dedicated to Lord Shiva. This temple was constructed in the sixth century and represents the 'earth' element. "
+    },
+    {
+        id: 4,
+        imgSrc: "/images/centre/hinduism/thillai-nataraja-temple-chidambaram.avif",
+        title: "Thillai Nataraja Temple, Chidambaram:",
+        description: "The Nataraja Temple also known as Chidambaram Temple is one of the major temples of Lord Shiva. Spread across 1,06,000 square meters, it is the oldest surviving temple in South India. The unique form of Lord Shiva as Nataraja is the primary deity of the temple and he is seen in every stone and pillar in the temple. "
     },
 ]
 }

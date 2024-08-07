@@ -9,7 +9,6 @@
 .header {
     background-color: brown;
     color: wheat;
-    flex: 1;
     
     display: flex;
     justify-content: center;
@@ -19,12 +18,13 @@
 .body {
     background-color: blanchedalmond;
     color: brown;
-    flex: 4;
     
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding: 12vh;
 }
 
 .imgContainer {

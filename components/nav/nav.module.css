@@ -17,11 +17,12 @@ header{
 }*/
 .nav{
   display: flex;
-  padding: 16px;
+  /* padding: 2px; */
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(176, 74, 1);
-  color: wheat;
+  /* background-color: rgb(176, 74, 1); */
+  background-color: black;
+  color: white;
   padding-right: 35px;
 }
 .nav__menu-bar{
@@ -54,7 +55,7 @@ header{
 }
 .nav__link{
   font-size: 18px; 
-  position: relative;
+  position: white;
   transition: all 0.2s;
 }
 
@@ -95,4 +96,23 @@ header{
   .nav__link:hover:before{
    width: 100%;
   }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  text-decoration: none; /* Remove underline from the link */
+
+  padding-left: 10px;
+}
+
+.logoImage {
+  width: 50px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logoText {
+  font-size: 18px; /* Adjust font size as needed */
+  margin: 0; /* Remove default margin from the h1 */
+  color: #fff; /* Adjust text color as needed */
 }

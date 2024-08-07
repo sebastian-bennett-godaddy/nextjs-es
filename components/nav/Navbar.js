@@ -24,8 +24,10 @@ const Navbar = () => {
   return (
     <header>
       <nav className={`${styles.nav}`}>
-        <Link href={"/"}>
-            <h1 className="logo">Élitacietè</h1>
+        <Link href="/" className={styles.logoContainer}>
+            <img src="/images/logo/Cool-Goat-Logo.webp" alt="ES Logo" className={styles.logoImage} />
+            {/* <img src="/favicon.ico" alt="Vercel Logo" className={styles.logoImage} /> */}
+            <h1 className={styles.logoText}>Élitacietè</h1>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}

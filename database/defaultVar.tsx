@@ -1,0 +1,1 @@
+export const religionStates = ['christianity','buddhism','hinduism'];

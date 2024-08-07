@@ -12,7 +12,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
           <Navbar/>
           <div className={styles.header}><h3>Your Connección</h3></div>
           <div className={styles.body}>
-          <img src={"/images/sample/SimpleMind.png"}/>
+          <img style={{width: '60vw', padding: '5vh', paddingBottom: '15vh'}} src={"/images/sample/SimpleMind.png"}/>
           </div>
         </div></>;
 };
