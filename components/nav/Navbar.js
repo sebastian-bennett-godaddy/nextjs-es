@@ -3,16 +3,12 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Logo from "./Logo";
 import NavItem from "./NavItem";
-import styles from './nav.module.css';
+import styles from "./nav.module.css";
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
-//   { text: "About Us", href: "/about" },
-//   { text: "Contact", href: "/contact" },
+  { text: "Belifs", href: "/belifs" },
   { text: "Attivida", href: "/attivida" },
   { text: "C'entra", href: "/centra" },
-  { text: "Connettiti", href: "/connettiti" },
-  { text: "Messina", href: "/messina" },
   { text: "Educación", href: "/educacion" },
   { text: "Partenza", href: "/partenza" },
 ];
@@ -25,9 +21,13 @@ const Navbar = () => {
     <header>
       <nav className={`${styles.nav}`}>
         <Link href="/" className={styles.logoContainer}>
-            <img src="/images/logo/Cool-Goat-Logo.webp" alt="ES Logo" className={styles.logoImage} />
-            {/* <img src="/favicon.ico" alt="Vercel Logo" className={styles.logoImage} /> */}
-            <h1 className={styles.logoText}>Élitacietè</h1>
+          <img
+            src="/images/logo/Cool-Goat-Logo.webp"
+            alt="ES Logo"
+            className={styles.logoImage}
+          />
+          {/* <img src="/favicon.ico" alt="Vercel Logo" className={styles.logoImage} /> */}
+          <h1 className={styles.logoText}>Élitacietè</h1>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
@@ -56,4 +56,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

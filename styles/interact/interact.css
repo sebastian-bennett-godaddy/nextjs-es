@@ -1,0 +1,4 @@
+.unselectable {
+  user-select: none; /* Prevent text selection */
+  pointer-events: none; /* Disable interaction */
+}

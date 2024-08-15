@@ -1,32 +1,62 @@
 .home {
-    background-color:black;
-    display: flex;
-    flex-direction: column;
-    /* width: 100vw;
-    height: 100vh; */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  /* cursor: url(/images/emotes/_monocle__by_swisscheesy_d1ippmu.gif), auto; Change cursor to pointer */
 }
 
 .header {
-    background-color: brown;
-    color: wheat;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 5px 10px 15px 0px rgba(155, 155, 155, 0.5);
 }
 
 .body {
-    background-color: blanchedalmond;
-    color: brown;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  /* background-color: rgb(0, 0, 0); */
+  background-color: rgb(240, 230, 213);
+  /* background-image: url(/images/background/pngtree-staircase-leading-into-the-clouds-for-spiritual-growth-or-a-way-image_2883089.jpg); */
+  background-size: cover;
+  color: brown;
 
-    padding: 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  flex: 1;
 }
 
 .imgContainer {
-    margin: 10px;
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  padding: 0; /* Remove default button padding */
+  cursor: url(/images/emotes/photoshp_cs3_emote_by_dbestarchitect_d1jhzzs.gif),
+    auto; /* Change cursor to pointer */
+  transition: all 2.5s ease; /* Smooth transition for hover effects */
+  /* box-shadow: 5px 10px 15px 0px rgba(255, 255, 255, 0.2); */
+  box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.imgContainer:hover {
+  opacity: 0.97; /* Slightly fade on hover */
+  transform: scale(1.05);
+  transition: all 0.6s ease;
+}
+
+.imgContainer:active {
+  transform: scale(0.95); /* Slightly scale down on click */
+}
+
+.mainImg {
+  display: block; /* Remove default image inline space */
+  width: 100%; /* Ensure image scales properly */
+  border-radius: 10px;
 }

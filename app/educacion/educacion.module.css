@@ -1,31 +1,117 @@
-.home {
-    background-color:black;
-    display: flex;
-    flex-direction: column;
+/* Define the animation */
+@keyframes horizontalScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
-    /* width: 100vw;
+.home {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+
+  /* width: 100vw;
     height: 100vh; */
 }
 
 .header {
-    background-color: brown;
-    color: wheat;
-    flex: 1;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #ffffff;
+
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .body {
-    background-color: blanchedalmond;
-    color: brown;
-    flex: 4;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: white;
+  color: brown;
+  flex: 4;
 
-    padding: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.religionTabs {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+
+  /* background-color: white; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer {
+  /* background-color: aqua; */
+  /* background-color: #e439d0; */
+  /* background-color: #f2f2f2; */
+  /* background-color: #faf3e0; */
+  /* background-color: #e9f0f4; */
+
+  overflow: hidden;
+
+  /* justify-content: space-around;
+    align-items: center; */
+}
+
+.cardWrapper {
+  width: 80vw;
+
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  /* overflow: auto; */
+
+  justify-content: center;
+
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+
+  /* vertical spacing */
+  gap: 20px;
+
+  animation: horizontalScroll 60s linear infinite;
+}
+
+.cardItem {
+  min-width: 20vw;
+  background: linear-gradient(to right, #f8b4a6, #f9d5bb);
+  color: white;
+}
+
+.imgTile {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+
+  /* background-color: #000; */
+  /* background-color: #dcdcdc; */
+  /* background-color: #f5f5dc; */
+  /* background-color: #f4a6a6; */
+  /* background-color: #ffebcd; */
+  /* background-color: #fffdd0; */
+
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.metaTitle {
+  white-space: normal; /* Allow text to wrap to the next line */
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+.metaDescription {
+  white-space: normal; /* Allow text to wrap to the next line */
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
 }

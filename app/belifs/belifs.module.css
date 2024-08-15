@@ -1,0 +1,67 @@
+.home {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  /* width: 100vw;
+    height: 100vh; */
+}
+
+.header {
+  background-color: white;
+  color: black;
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* min-height: 20vh; */
+}
+
+.body {
+  background-color: blanchedalmond;
+  color: brown;
+  flex: 4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+
+  justify-content: center;
+
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+
+  /* vertical spacing */
+  gap: 20px;
+
+  /* justify-content: space-around;
+    align-items: center; */
+}
+
+.religionTabs {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metacontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

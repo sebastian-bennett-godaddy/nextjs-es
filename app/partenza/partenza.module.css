@@ -1,49 +1,63 @@
 .home {
-    background-color:black;
-    display: flex;
-    flex-direction: column;
-    /* width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  /* width: 100vw;
     height: 100vh; */
 }
 
 .header {
-    background-color: brown;
-    color: wheat;
-    flex: 1;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: linear-gradient(to right, #b0b0b0, #e0e0e0);
+  color: #fff;
+  /* text-shadow: 1px 1px 2px rgba(333, 333, 333, 0.2); */
 
-    /* min-height: 15vh; */
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* min-height: 15vh; */
 }
 
 .body {
-    background-color: white;
-    color: brown;
-    flex: 4;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: white;
+  color: brown;
+  flex: 4;
 
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 .brandContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: row;
 
-    gap: 20px;
+  width: 80vw;
+  /* background-color: brown; */
+  justify-content: center;
+
+  gap: 7vw;
 }
 
-.brandRow {
-    display: flex;
-    flex-direction: row;
+.brandCol {
+  display: flex;
+  flex-direction: column;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-    gap: 7vw;
+  gap: 2vh;
+
+  /* background-color: aqua; */
+
+  align-items: center;
+}
+
+.brandImg {
+  max-height: 20vh;
 }
